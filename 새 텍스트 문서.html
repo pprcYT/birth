@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>아빠 생일</title>
+  </head>
+  <body>
+    <style>
+        body{
+            background-image: url(https://www.wallpapertip.com/wmimgs/4-48982_beautiful-birthday-wallpaper-birthday-background.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #skfWK{
+            font-size: 100px;
+        }
+        #toddlf{
+            font-size: 80px;
+            color: deepskyblue;
+        }
+    </style>
+    <div class="form-group">
+      <input type="date" name="date" id="date" />
+    </div>
+    <div style="text-align: center;">
+    <div id="skfWK">
+    <p id="dateDisplay"></p>
+    </div>
+    <div id="toddlf">
+    <p id="qjf"></p>
+    </div>
+    </div>
+    <script>
+      const dateInput = document.getElementById("date");
+      const dateDisplay = document.getElementById("dateDisplay");
+      dateInput.addEventListener("input", function (e) {
+        // 여기에 날짜가 들어있음, 주석해제하고 콘솔 확인
+        console.log(e.target.value, e);
+        const dates = e.target.value.split("-");
+        // es6 이전 문법
+        // var text = dates[0] + "년" + dates[1] + "월" + dates[2] + "일 입니다.";
+        // es6
+        const text = `${dates[0]}년 ${dates[1]}월 ${dates[2]}일`;
+        const birth = `아빠의 생일을 축하합니다!`;
+        dateDisplay.innerText = text;
+        qjf.innerText = birth;
+      });
+    </script>
+  </body>
+</html>
